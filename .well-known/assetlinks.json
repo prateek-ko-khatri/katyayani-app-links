@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.zoho.zohoapp",
+      "sha256_cert_fingerprints":
+        ["07:1C:C2:90:C6:C9:E5:BA:1E:5E:F1:99:FA:AE:4F:E3:58:24:23:1A:93:26:41:CA:2A:D2:09:37:BF:D0:84:55"]
+    }
+  }
+]
