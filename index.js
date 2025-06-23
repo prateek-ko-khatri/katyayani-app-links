@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(cors());
 
 // Serve .well-known directory
-app.use('retailer/.well-known', express.static(path.join(__dirname, '.well-known'), {
+app.use('/retailer/.well-known', express.static(path.join(__dirname, '.well-known'), {
   setHeaders: (res, path, stat) => {
     if (path.endsWith('.json')) {
       res.set('Content-Type', 'application/json');
