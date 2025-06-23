@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(cors());
 
 // Serve .well-known directory
-app.use('/.well-known', express.static(path.join(__dirname, '.well-known'), {
+app.use('retailer/.well-known', express.static(path.join(__dirname, '.well-known'), {
   setHeaders: (res, path, stat) => {
     if (path.endsWith('.json')) {
       res.set('Content-Type', 'application/json');
@@ -16,8 +16,8 @@ app.use('/.well-known', express.static(path.join(__dirname, '.well-known'), {
   }
 }));
 
-app.get('/', (req, res) => {
-  res.send('Server is running. assetlinks.json is hosted at /.well-known/assetlinks.json');
+app.get('/retailer', (req, res) => {
+  res.send('Server is running. assetlinks.json is hosted at retailer/.well-known/assetlinks.json');
 });
 
 // Start the server
