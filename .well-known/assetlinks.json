@@ -12,5 +12,19 @@
         "07:1C:C2:90:C6:C9:E5:BA:1E:5E:F1:99:FA:AE:4F:E3:58:24:23:1A:93:26:41:CA:2A:D2:09:37:BF:D0:84:55"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.katyayani.krishisevakendra",
+      "sha256_cert_fingerprints": [
+        "30:A8:04:57:45:50:F5:49:77:A6:F1:30:2F:4B:88:6D:F8:32:92:CD:62:5B:D9:D9:7E:DB:BC:B0:B6:78:6B:8B",
+        "E1:F8:FF:F6:C5:1E:80:56:2B:78:FD:50:63:87:47:F9:8B:86:C3:AE:08:9A:A3:1F:E0:69:09:0D:32:13:80:63"
+      ]
+    }
   }
 ]
