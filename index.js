@@ -73,6 +73,7 @@ app.get('/deeplink/:shortId', async (req, res) => {
   const urlDoc = await Url.findOne({
     shortId
   }); 
+
   if (urlDoc) {
     res.json({
       originalUrl: urlDoc.originalUrl,

@@ -4,6 +4,7 @@ const urlSchema = new mongoose.Schema({
   fallbackUrl: { type: String, required: false, default: 'https://katyayanikrishidirect.com' },
   destination: { type: String, required: true },
   packageName: { type: String, default: '' },
+  deeplink: { type: String, required: false },
   shortId: { type: String, required: true, unique: true },
   createdAt: { type: Date, default: Date.now }
 });
