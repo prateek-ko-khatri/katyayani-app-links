@@ -74,6 +74,9 @@ app.get('/deeplink/:shortId', async (req, res) => {
     shortId
   }); 
 
+
+
+  
   if (urlDoc) {
     res.json({
       originalUrl: urlDoc.originalUrl,
