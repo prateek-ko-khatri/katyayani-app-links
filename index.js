@@ -36,13 +36,6 @@ app.post('/shorten', async (req, res) => {
 });
 
 
-// app.get('/:shortId', async (req, res) => {
-//   const { shortId } = req.params;
-//   const url = await Url.findOne({ shortId });
-//   if (url) return res.redirect(url.originalUrl);
-//   res.status(404).send('URL not found');
-// });
-
 
 app.get('/:shortId', async (req, res) => {
   const { shortId } = req.params;
@@ -55,6 +48,20 @@ app.get('/:shortId', async (req, res) => {
   }
 });
 
+app.get('/get-url/:shortId', async (req, res) => {
+  const { shortId } = req.params;
+  const urlDoc = await Url.findOne({
+    shortId
+  }); 
+  if (urlDoc) {
+    res.json({
+      originalUrl: urlDoc.originalUrl,
+      fallbackUrl: urlDoc.fallbackUrl
+    });
+  } else {
+    res.status(404).json({ error: 'URL not found' });
+  } 
+});
 
 
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known'), {
